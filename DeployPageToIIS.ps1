@@ -1,4 +1,9 @@
-﻿Import-Module webadministration
+﻿Import-Module ServerManager
+
+Add-WindowsFeature -Name Web-Server,Web-Mgmt-Console -IncludeAllSubFeature
+
+Import-Module webadministration
+
 $SiteFolderPath = "C:\inetpub\wwwroot\3"                                      # Website Folder
 $SiteAppPool = "MyAppPool"                                                    # Application Pool Name
 $SiteName = "MySite"                                                          # IIS Site Name
